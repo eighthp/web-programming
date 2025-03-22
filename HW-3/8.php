@@ -5,7 +5,7 @@ function increaseEnthusiasm($str)
     return $str . '!';
 }
 
-echo increaseEnthusiasm('Hell yeah') . "\n";
+echo increaseEnthusiasm('anime') . "\n";
 
 function repeatThreeTimes($str)
 {
