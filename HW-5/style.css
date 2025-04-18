@@ -1,0 +1,218 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-image: 
+        radial-gradient(circle at 75% 30%, rgba(142, 0, 0, 0.15) 0%, transparent 25%),
+        url("https://yandex-images.clstorage.net/c4zh7w232/0554a0ryN_/GA6d7p8fSzav1mAkPv3ySzTBcach8daEJseQK1M43pFMG-2A12sVWztAfcq_GplKgiNYcdIm_c7CYs7PceE6K1lc2KLcXlNq-Jd4bXL6-08rimzvIbbK1i3Qi3hfeNPKRh3t67BIMChTOUuwz2uxANp0CSPLOL6O-wuM3nr6b3EBP5jLvRoSD6PWHSQd5v5YP553iCKv0cELyeN-VmuDyBhghvWYaysBYxxQncNylDL2XAQt1lC-r-w21M5x9k1wOwKF4IgvEjGdwC0FLNngdw-9a5g0p8bMNtXCb0V9ieM8dbv_oH4nKV06cL75dbYJ4VAmIt5-vYzWHur9V9dHezcEmOmEODMIqsktLT7X2n42ikmFGrzK8wn53n9eX47LN0WnxJtEOgtaAECe3G6HLN50Hi7GeoWezRnL217TYFwKIZvKgSAAK6riIBo73v5CNoFbsS-_-M8p2_lyYEOm9zhvrfKaQAQtVjlXrcRHuDvwUQEO22C_ttUi-MpEz1xGAAeI3pcfBjGhxAcFN8b0fjacTKwTqNb4K-XmfHlsveYjZo_EuXkjGXssdbjFULku-WM_EstitoriIM36d8l-WiAIj9ybDikRmMIGKAjb32oUoGeGE4vN0QfK6nxbYY3DE0S48qpcAwBJIU63_nePHuhoOCXgboS36SPo7lTSbl07B4vIoD8JDZ3KCgcL5fh5BqRTsAOU5-wM7_p3akehxyh8keascDcTagxegeV7rgz9cQ4D1nKYo_Qyyt1oyn90CyCq2bQHLSyb3yUJC-L5eh6beaMbj_vUI8LDbVdRoOU-XabngVMTOm8ee4rgcY4O0HI-Cel0lpT0NtnTU-VBUDcoo_WsPCkKvuMXNRTw528rrHWSBJjpzj_n62BzXqrQImK657tZMxtiDGyqxmCnCMJ_PwflWa639Dvr6FbmXkQtOb7boRoSEI7WAxcd9PBdKL9bkT-4x-oV8cVNdmY");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fefefe;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(142, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-wrapper {
+    background: rgba(20, 0, 0, 0.7);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 
+        0 10px 25px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        0 0 30px -5px rgba(142, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form-wrapper:hover {
+    transform: perspective(1000px) translateY(-5px);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.1),
+        0 0 40px -5px rgba(142, 0, 0, 0.6);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 10px rgba(142, 0, 0, 0.5);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(142, 0, 0, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(142, 0, 0, 0) 100%);
+    border-radius: 3px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.input-group {
+    position: relative;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(10, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease-out;
+    box-sizing: border-box;
+    color: white;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 0, 0, 0.4);
+}
+
+input:focus, select:focus, textarea:focus {
+    background: rgba(20, 0, 0, 0.6);
+    border-color: rgba(142, 0, 0, 0.8);
+    outline: none;
+    box-shadow: 
+        inset 0 1px 3px rgba(0, 0, 0, 0.3),
+        0 0 0 2px rgba(142, 0, 0, 0.4);
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+button {
+    background: linear-gradient(135deg, #000000 0%, #2a0000 100%);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 7px 20px rgba(0, 0, 0, 0.4),
+        0 0 15px rgba(142, 0, 0, 0.3);
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+select {
+    background: rgba(30, 0, 0, 0.8) !important;
+    color: #ffffff !important;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 35px !important;
+}
+
+option {
+    background: rgba(20, 0, 0, 0.9);
+    color: white;
+}
+
+select:focus {
+    background: rgba(40, 0, 0, 0.9) !important;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .form-wrapper {
+        padding: 25px;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
